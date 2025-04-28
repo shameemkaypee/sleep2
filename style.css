@@ -1,0 +1,108 @@
+/* Base styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5faff;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header and Greeting */
+.header {
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  text-align: center;
+  padding: 20px 10px;
+  border-bottom: 2px solid #90caf9;
+}
+.header h1 {
+  margin: 0;
+  font-size: 2em;
+}
+.greeting {
+  margin-top: 10px;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+.greeting .alert {
+  color: #d32f2f; /* red alert text */
+  font-weight: bold;
+}
+.greeting .highlight {
+  color: #1976d2; /* blue highlight text */
+  font-weight: bold;
+}
+
+/* Input Section */
+.input-section {
+  background-color: #ffffff;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.input-section label {
+  font-size: 1em;
+  margin-right: 10px;
+}
+#sleepHours {
+  vertical-align: middle;
+  margin: 0 10px;
+}
+#sleepValue {
+  font-weight: bold;
+}
+.risk-profile {
+  margin-top: 15px;
+  font-size: 1em;
+}
+.risk-profile p {
+  margin: 5px 0;
+}
+.risk-profile .high-alert {
+  color: #d32f2f;
+  font-weight: bold;
+}
+.risk-profile .caution {
+  color: #f57c00;
+  font-weight: bold;
+}
+.risk-profile .highlight {
+  color: #1976d2;
+  font-weight: bold;
+}
+
+/* Charts Section */
+.charts-section {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.charts-section h2 {
+  color: #0d47a1;
+  margin-top: 20px;
+  font-size: 1.4em;
+}
+canvas {
+  max-width: 100%;
+  margin: 20px 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  .header h1 {
+    font-size: 1.5em;
+  }
+  .charts-section h2 {
+    font-size: 1.2em;
+  }
+}
