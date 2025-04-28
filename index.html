@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>IIM Sirmaur BMS - Sleep Data Interpreter</title>
+  <!-- Chart.js library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <h1>IIM Sirmaur BMS - Sleep Data Interpreter</h1>
+    <!-- Greeting prompt with emojis -->
+    <p class="greeting">💤 Welcome to the "IIM Sirmaur BMS - Sleep Data Interpreter"! <br>
+      See how cutting even a few hours of sleep drastically raises your risk for mental health problems, memory loss, and emotional instability. <br>
+      Input your sleep hours to see your personal risk profile.<br>
+      📊 <span class="alert">Less Sleep = Higher Risk 🔥</span> | <span class="highlight">More Sleep = Stronger Memory 🧠</span>
+    </p>
+  </header>
+
+  <main class="container">
+    <!-- User Input Section -->
+    <section class="input-section">
+      <label for="sleepHours">Your sleep hours per day:</label>
+      <input type="range" id="sleepHours" name="sleepHours" min="0" max="12" step="0.5" value="8" oninput="updateSleepHours(value)">
+      <span id="sleepValue">8</span> hours
+      <button onclick="calculateRisk()">Calculate Risk Profile</button>
+      <div id="riskProfile" class="risk-profile">
+        <!-- Dynamic risk profile info will appear here -->
+      </div>
+    </section>
+
+    <!-- Charts Section -->
+    <section class="charts-section">
+      <h2>Student Sleep Patterns</h2>
+      <!-- Bar chart: Current vs At-Home Sleep from survey -->
+      <canvas id="sleepChart"></canvas>
+      
+      <h2>Mental Health Risk vs Sleep Hours</h2>
+      <!-- Line chart: Risk probability curve -->
+      <canvas id="riskChart"></canvas>
+    </section>
+  </main>
+
+  <!-- Link to JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
